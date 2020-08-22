@@ -17,4 +17,8 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--cpus", "2"]
   end
 
+  # Sync Folders
+  # Edit & uncomment the lines below to enable
+  # config.vm.synced_folder "LOCAL_DIR", "VAGRANT_DIR" # using default type from vagrant
+  # config.vm.synced_folder "LOCAL_DIR", "VAGRANT_DIR", type: "nfs" # using nfs (can be faster on mac)
 end
