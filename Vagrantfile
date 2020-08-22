@@ -10,4 +10,11 @@ Vagrant.configure("2") do |config|
 	if File.exists? customizeScriptPath then
 		config.vm.provision "shell", path: customizeScriptPath
 	end
+
+  # Resources
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.customize ["modifyvm", :id, "--cpus", "2"]
+  end
+
 end
