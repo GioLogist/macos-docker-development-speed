@@ -1,10 +1,12 @@
-# Ubuntu VM w/Docker & Docker Compose
+# Speeding up MacOS Docker Development, by using an Ubuntu VM w/Docker & Docker Compose
 
 MacOS is [slow](https://stackoverflow.com/questions/55951014/docker-in-macos-is-very-slow/55953023#55953023) at running Docker. It's a known  [issue](https://github.com/docker/for-mac/issues/77). There are [workarounds](https://engageinteractive.co.uk/blog/making-docker-faster-on-mac) that can be used. Even with them, it's not as fast as when we run Docker directly on a Linux system. 
 
 In fact, running a Linux VM on your Mac and then using that VM to run Docker, is significantly [faster](./benchmarks.md) than just running Docker on your mac. This repo was made for that very reason. And becuase of my frustration as a result.
 
 You can use this repo to quickly scaffold an Ubuntu box, with Docker & Docker Compose pre-installed. 
+
+> Note: There are probably other, even better approaches to this, such as [provisioning docker](https://www.vagrantup.com/docs/provisioning/docker) or [vagrant-docker-compose](https://github.com/leighmcculloch/vagrant-docker-compose). But my goal here was to create a solution from scratch and learn more about the nuances of everything in the process. 
 
 # Prerequisites
 
@@ -31,7 +33,7 @@ vagrant ssh
 # Customization
 
 ## VagrantFile
-Editing the `Vagrantfile currently allows for the following
+Editing the Vagrantfile currently allows for the following
 
 - Specify the IP address you'll use to access your box
 - Specify resources to allocate for your box
