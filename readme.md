@@ -77,3 +77,8 @@ Additionally, you may need to use the `nfs` type for your synced folder. For exa
 # Additional
 
 - [Benchmarks](./benchmarks.md)
+
+# Todo
+
+- [ ] Make VagrantFile config options load from a YML file, for a better workflow & easy scaffolding
+- [ ] Create a way for others to benchmark and understand the major performance benefits documented in [benchmarks.md](./benchmarks.md)
